@@ -1,0 +1,408 @@
+@import '@fontsource/sora/400.css';
+@import '@fontsource/sora/600.css';
+@import '@fontsource/sora/700.css';
+@import '@fontsource/dm-sans/400.css';
+@import '@fontsource/dm-sans/500.css';
+@import '@fontsource/dm-sans/600.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 65% 4%;
+    --foreground: 210 30% 94%;
+
+    --card: 220 55% 7%;
+    --card-foreground: 210 30% 94%;
+    --surface-1: 220 50% 9%;
+    --surface-2: 220 45% 12%;
+
+    --popover: 220 55% 7%;
+    --popover-foreground: 210 30% 94%;
+
+    --primary: 243 72% 62%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 243 72% 62%;
+
+    --secondary: 220 45% 12%;
+    --secondary-foreground: 210 30% 94%;
+
+    --accent: 186 96% 52%;
+    --accent-foreground: 220 65% 4%;
+
+    --muted: 220 40% 13%;
+    --muted-foreground: 215 18% 52%;
+
+    --destructive: 0 70% 54%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 38% 14%;
+    --input: 220 50% 8%;
+    --ring: 243 72% 62%;
+    --radius: 0.8rem;
+
+    --success: 158 62% 46%;
+    --warning: 43 94% 56%;
+    --danger: 0 70% 54%;
+    --info: 199 92% 52%;
+
+    --badge-notes: 243 72% 62%;
+    --badge-pyq: 43 94% 56%;
+    --badge-youtube: 0 70% 54%;
+    --badge-book: 158 62% 46%;
+    --badge-ai: 186 96% 52%;
+    --badge-teacher: 270 70% 60%;
+    --badge-student: 199 92% 52%;
+    --badge-guideline: 320 68% 58%;
+
+    --hero-orb-1: 243 72% 62%;
+    --hero-orb-2: 186 96% 52%;
+    --hero-orb-3: 270 70% 55%;
+    --hero-heading-from: 210 30% 94%;
+    --hero-heading-to: 243 72% 75%;
+
+    --sidebar-bg: 220 65% 3%;
+    --sidebar-border: 220 38% 11%;
+    --sidebar-item-active: 243 72% 62%;
+    --sidebar-item-hover: 220 45% 12%;
+
+    --sidebar-background: 220 65% 3%;
+    --sidebar-foreground: 215 18% 52%;
+    --sidebar-primary: 243 72% 62%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 45% 12%;
+    --sidebar-accent-foreground: 210 30% 94%;
+    --sidebar-ring: 243 72% 62%;
+
+    /* Moderator accent — teal-leaning, distinct from admin (danger) and student (pure indigo) */
+    --mod-accent: 172 70% 42%;
+    --mod-accent-foreground: 0 0% 100%;
+    --mod-accent-soft: 172 60% 38%;
+    --mod-accent-glow: 172 70% 42%;
+
+    /* Moderator surface — slightly warmer than admin surfaces */
+    --mod-surface: 210 50% 8%;
+    --mod-surface-hover: 210 45% 10%;
+
+    /* Moderator badge */
+    --mod-badge-bg: 172 60% 15%;
+    --mod-badge-text: 172 70% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body min-h-screen;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: 'Sora', system-ui, sans-serif;
+  }
+
+  .light {
+    --background: 210 20% 98%;
+    --foreground: 220 65% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 65% 4%;
+    --surface-1: 210 20% 96%;
+    --surface-2: 210 20% 92%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 65% 4%;
+
+    --primary: 243 75% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 20% 92%;
+    --secondary-foreground: 220 65% 4%;
+
+    --muted: 210 20% 90%;
+    --muted-foreground: 215 16% 45%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 95%;
+
+    --sidebar-bg: 210 20% 96%;
+    --sidebar-border: 210 20% 88%;
+    --sidebar-item-hover: 210 20% 90%;
+    --sidebar-background: 210 20% 96%;
+    --sidebar-foreground: 215 16% 45%;
+
+    /* Moderator light adjustments */
+    --mod-surface: 210 20% 94%;
+    --mod-surface-hover: 210 20% 90%;
+    --mod-badge-bg: 172 70% 92%;
+    --mod-badge-text: 172 70% 35%;
+
+    --hero-heading-from: 220 65% 4%;
+    --hero-heading-to: 243 72% 40%;
+  }
+
+  body {
+    @apply transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .noise-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow:
+      0 4px 24px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .glass-strong {
+    background: hsla(var(--card) / 0.85);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid hsla(var(--foreground) / 0.1);
+    box-shadow:
+      0 8px 40px rgba(0, 0, 0, 0.45),
+      inset 0 1px 0 hsla(var(--foreground) / 0.05);
+  }
+
+  .gradient-border {
+    position: relative;
+    background: hsl(var(--card));
+    border-radius: var(--radius);
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.5) 0%, rgba(0, 212, 220, 0.2) 50%, rgba(99, 102, 241, 0.1) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.35), 0 0 80px rgba(99, 102, 241, 0.15);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 30px rgba(0, 212, 220, 0.3), 0 0 60px rgba(0, 212, 220, 0.1);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(243 72% 78%) 0%, hsl(186 96% 65%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-hero {
+    background: linear-gradient(160deg, #E8EAF8 0%, #A5B4FC 40%, #67E8F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 99px;
+  }
+
+  .orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(80px);
+    opacity: 0.18;
+    animation: orb-float 12s ease-in-out infinite;
+  }
+
+  .orb-1 {
+    width: 600px;
+    height: 600px;
+    background: hsl(var(--hero-orb-1));
+    top: -200px;
+    left: -150px;
+    animation-duration: 14s;
+  }
+
+  .orb-2 {
+    width: 400px;
+    height: 400px;
+    background: hsl(var(--hero-orb-2));
+    top: 100px;
+    right: -100px;
+    animation-duration: 10s;
+    animation-delay: -4s;
+  }
+
+  .orb-3 {
+    width: 300px;
+    height: 300px;
+    background: hsl(var(--hero-orb-3));
+    bottom: -100px;
+    left: 40%;
+    animation-duration: 16s;
+    animation-delay: -8s;
+  }
+
+  @keyframes orb-float {
+
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+      transform: translate(30px, -20px) scale(1.05);
+    }
+
+    66% {
+      transform: translate(-20px, 15px) scale(0.97);
+    }
+  }
+
+  .dot-grid {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg,
+        hsl(var(--muted)) 0%,
+        hsl(var(--surface-2)) 50%,
+        hsl(var(--muted)) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.8s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .nav-active-indicator {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    background: hsl(var(--primary));
+    border-radius: 0 3px 3px 0;
+    box-shadow: 0 0 8px hsl(var(--primary) / 0.6);
+  }
+
+  /* Moderator accent glow — used on mod-specific action buttons */
+  .glow-mod {
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.25), 0 0 60px rgba(20, 184, 166, 0.10);
+  }
+
+  /* Slide-up action bar — for material cards in Browse & Study */
+  .mod-action-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, hsl(var(--card)) 70%, transparent 100%);
+    padding: 12px 16px 14px;
+    border-radius: 0 0 calc(var(--radius)) calc(var(--radius));
+    transform: translateY(8px);
+    opacity: 0;
+    transition: transform 0.18s ease, opacity 0.18s ease;
+    pointer-events: none;
+  }
+
+  .group:hover .mod-action-bar {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Moderator role badge */
+  .mod-role-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: hsl(var(--mod-badge-bg));
+    color: hsl(var(--mod-badge-text));
+    border: 1px solid hsl(var(--mod-accent) / 0.25);
+    border-radius: 9999px;
+    padding: 2px 10px;
+    font-size: 11px;
+    font-family: var(--font-body);
+    font-weight: 500;
+  }
+
+  /* Draft save indicator pulse */
+  @keyframes draft-pulse {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.4;
+    }
+  }
+
+  .draft-indicator {
+    animation: draft-pulse 2s ease-in-out infinite;
+  }
+
+  /* Urgency pulse — for pending action items */
+  @keyframes urgency-ring {
+    0% {
+      box-shadow: 0 0 0 0 hsl(var(--warning) / 0.4);
+    }
+
+    70% {
+      box-shadow: 0 0 0 6px hsl(var(--warning) / 0);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 hsl(var(--warning) / 0);
+    }
+  }
+
+  .urgency-pulse {
+    animation: urgency-ring 2s ease-out infinite;
+  }
+
+  /* Feedback accordion expand */
+  .feedback-row-expanded {
+    border-color: hsl(var(--mod-accent) / 0.3);
+    background: hsl(var(--mod-accent) / 0.03);
+  }
+}

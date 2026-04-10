@@ -1,0 +1,35 @@
+
+C:\Users\nikhi\Pictures\frontend-study-material\src\pages\AdminContentManagement.tsx
+  29:52  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\nikhi\Pictures\frontend-study-material\src\pages\AdminDashboard.tsx
+  29:90  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\nikhi\Pictures\frontend-study-material\src\pages\AdminModeratorManagement.tsx
+   18:50  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  214:81  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\nikhi\Pictures\frontend-study-material\src\pages\AdminRequestCenter.tsx
+  23:58  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  81:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\nikhi\Pictures\frontend-study-material\src\pages\AdminSettings.tsx
+  61:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\nikhi\Pictures\frontend-study-material\src\pages\AdminStudyGuidelines.tsx
+  21:58  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  32:37  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\nikhi\Pictures\frontend-study-material\src\pages\AdminTagsAliasLibrary.tsx
+  17:58  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  40:41  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\nikhi\Pictures\frontend-study-material\src\pages\AdminUserManagement.tsx
+  20:52  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\nikhi\Pictures\frontend-study-material\src\pages\FileManagerPage.tsx
+  21:10  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  83:41  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Γ£û 14 problems (14 errors, 0 warnings)
+

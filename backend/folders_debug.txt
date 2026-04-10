@@ -1,0 +1,73 @@
+Γùç injecting env (13) from .env // tip: Γîÿ enable debugging { debug: true }
+[
+  {
+    "id": "2fccc5ca-e831-469a-8b83-74f1a1e946dc",
+    "name": "CSE ΓÇö Computer Science Engineering",
+    "parent_id": null,
+    "department_id": "e3e41051-7572-4a02-ad35-49fa9cbcb8a1",
+    "semester": null,
+    "subject_id": null,
+    "folder_type": "department",
+    "type_key": null,
+    "tags": [],
+    "created_by": null,
+    "created_at": "2026-04-09T11:12:27.788297+00:00",
+    "updated_at": "2026-04-09T11:12:27.788297+00:00"
+  },
+  {
+    "id": "8873fab2-067c-4ebe-969f-cc7603834aaa",
+    "name": "1st Semester",
+    "parent_id": "2fccc5ca-e831-469a-8b83-74f1a1e946dc",
+    "department_id": "e3e41051-7572-4a02-ad35-49fa9cbcb8a1",
+    "semester": 1,
+    "subject_id": null,
+    "folder_type": "semester",
+    "type_key": null,
+    "tags": [],
+    "created_by": null,
+    "created_at": "2026-04-09T11:12:27.788297+00:00",
+    "updated_at": "2026-04-09T11:12:27.788297+00:00"
+  },
+  {
+    "id": "16c55e9d-7b54-4c5a-98f7-252feecef2e3",
+    "name": "2nd Semester",
+    "parent_id": "2fccc5ca-e831-469a-8b83-74f1a1e946dc",
+    "department_id": "e3e41051-7572-4a02-ad35-49fa9cbcb8a1",
+    "semester": 2,
+    "subject_id": null,
+    "folder_type": "semester",
+    "type_key": null,
+    "tags": [],
+    "created_by": null,
+    "created_at": "2026-04-09T11:12:27.788297+00:00",
+    "updated_at": "2026-04-09T11:12:27.788297+00:00"
+  },
+  {
+    "id": "4120756b-29ff-4a98-9483-56e352500f1c",
+    "name": "3rd Semester",
+    "parent_id": "2fccc5ca-e831-469a-8b83-74f1a1e946dc",
+    "department_id": "e3e41051-7572-4a02-ad35-49fa9cbcb8a1",
+    "semester": 3,
+    "subject_id": null,
+    "folder_type": "semester",
+    "type_key": null,
+    "tags": [],
+    "created_by": null,
+    "created_at": "2026-04-09T11:12:27.788297+00:00",
+    "updated_at": "2026-04-09T11:12:27.788297+00:00"
+  },
+  {
+    "id": "9ee4e429-1afc-4d8d-ad09-aa78af4557b3",
+    "name": "4th Semester",
+    "parent_id": "2fccc5ca-e831-469a-8b83-74f1a1e946dc",
+    "department_id": "e3e41051-7572-4a02-ad35-49fa9cbcb8a1",
+    "semester": 4,
+    "subject_id": null,
+    "folder_type": "semester",
+    "type_key": null,
+    "tags": [],
+    "created_by": null,
+    "created_at": "2026-04-09T11:12:27.788297+00:00",
+    "updated_at": "2026-04-09T11:12:27.788297+00:00"
+  }
+]
